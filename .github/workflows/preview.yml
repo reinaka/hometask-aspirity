@@ -1,0 +1,15 @@
+name: preview
+on:
+  push:
+    branches: [master]
+  workflow_dispatch:
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Install npm dependencies
+        uses: npm install
+      - name: Build project
+        uses: npm run build
