@@ -2,14 +2,16 @@ import { Avatar } from './Avatar';
 import { InfoBlock } from './InfoBlock';
 import { UserPropsT } from '@/public/mockData/currentUserData';
 
+export type UserBannerPropsT = Pick<UserPropsT, 'userName' | 'avatarSrc' | 'userRole' | 'userLocation'| 'localTime'> 
+    & {children?: React.ReactNode};
+
 export const UserBanner = (
-    { userName, avatarSrc, userRole, userLocation, localTime, children } : UserPropsT & {children?: React.ReactNode}
-) => {
+    { userName, avatarSrc, userRole, userLocation, localTime, children } : UserBannerPropsT) => {
     return (
         <InfoBlock className="px-10 pt-10 pb-5">
             <div className="flex flex-col">
                 <div className="flex flex-row gap-12 items-center">
-                    <Avatar avatarSrc={avatarSrc}/>
+                    <Avatar avatarSrc={avatarSrc} size="big"/>
                     <h1 className="font-bold text-5xl max-w-[398px] flex flex-col">
                         <span>{userName.lastName}</span>
                         <span>{userName.firstName}</span>

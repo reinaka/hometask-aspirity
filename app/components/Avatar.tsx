@@ -12,9 +12,10 @@ const sizeMap: SizeMapT = {
 export type AvatarPropsT = {
     avatarSrc: string,
     size: 'big' | 'small',
+    className?: string
 };
 
-export const Avatar = ({ avatarSrc, size } : AvatarPropsT) => {
+export const Avatar = ({ avatarSrc, size, className } : AvatarPropsT) => {
     return (
         <div>
             <Image 
@@ -22,7 +23,7 @@ export const Avatar = ({ avatarSrc, size } : AvatarPropsT) => {
                 height={sizeMap[size] ?? 48}
                 alt="User photo"
                 src={avatarSrc}
-                className="rounded-full"
+                className={`rounded-full ${className || ''}`}
             />
         </div>
     )

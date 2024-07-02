@@ -14,6 +14,7 @@ module.exports = {
       'txt-tertiary': '#76787A',
       'background-secondary': '#232324',
       'accent': '#0047BB',
+      'accent-deep': '#003182',
       'border-primary': '#363738',
       'red-dim': '#D77556',
     },

@@ -7,7 +7,7 @@ import {
   TabsTrigger,
 } from './components/Tabs';
 import { PersonalInfo } from './components/PersonalInfo';
-import { EmployeeData } from './components/EmployeeData';
+import { EmployeeData } from './components/employee-data/EmployeeData';
 
 export default function Home() {
   return (
@@ -28,7 +28,12 @@ export default function Home() {
         <div className="mt-4">
           <TabsContent value="generalInfo" className="flex flex-row gap-4 w-full">
             <PersonalInfo className="grow"/>
-            <EmployeeData className="w-[658px]"/>
+            <EmployeeData 
+              className="w-[658px]"
+              project={currentUserData.project}
+              startDate={currentUserData.startDate}
+              endDate={currentUserData.endDate}
+            />
           </TabsContent>
           <TabsContent value="vacation"><div>Vacation</div></TabsContent>
         </div>
