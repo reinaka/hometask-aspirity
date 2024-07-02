@@ -19,29 +19,29 @@ export const EmployeeData = ({ className, project, startDate, endDate } : Employ
     const membersLength = teamMembersData.length;
 
     return (
-        <InfoBlock className="p-[30px] flex flex-col gap-10">
+        <InfoBlock className={`p-[30px] flex flex-col gap-10 lg:max-w-[658px] lg:w-[45%] ${className || ''}`}>
             <div className="flex flex-row justify-between items-center">
                 <h2 className="blockTitle">Загрузка сотрудника</h2>
                 <p className="text-[14px] text-red-dim">100%</p>
             </div>
-            <div className="flex flex-wrap gap-y-10">
+            <div className="flex flex-col sm:flex-row flex-wrap gap-y-10">
                 <SectionBlock
                     title='Название проекта'
-                    className="w-1/2 "
+                    className="sm:w-1/2 "
                 >
                     <p>{project.title}</p>
                 </SectionBlock>
 
                 <SectionBlock
                     title='Тип проекта'
-                    className="w-1/2 "
+                    className="sm:w-1/2 "
                 >
                     <p>{project.type}</p>
                 </SectionBlock>
 
                 <SectionBlock
                     title='Ответственный'
-                    className="w-1/2 "
+                    className="sm:w-1/2 "
                 >
                     <div className="flex flex-row items-center gap-2">
                         <Avatar 
@@ -54,7 +54,7 @@ export const EmployeeData = ({ className, project, startDate, endDate } : Employ
 
                 <SectionBlock
                     title='Команда'
-                    className="w-1/2 "
+                    className="w-full sm:w-1/2 lg:w-full 2xl:w-1/2"
                 >
                 {membersLength && (
                     <Dialog>
@@ -85,7 +85,7 @@ export const EmployeeData = ({ className, project, startDate, endDate } : Employ
 
                 <SectionBlock
                     title='Сроки работы'
-                    className="w-1/2 "
+                    className="w-full"
                 >
                     <div className="flex flex-row gap-2">
                         <span>{startDate}</span>
@@ -96,7 +96,7 @@ export const EmployeeData = ({ className, project, startDate, endDate } : Employ
                     </div>
                 </SectionBlock>
             </div>
-            <Button text="Посмотреть всю загрузку" />
+            <Button text="Посмотреть всю загрузку" className="max-w-[598px]"/>
         </InfoBlock>
     )
 }

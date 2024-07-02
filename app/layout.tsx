@@ -19,7 +19,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="max-w-[1494px] mx-auto">
+      <body className="w-[94%] max-w-[1494px] mx-auto">
         <header>
           Header
         </header>

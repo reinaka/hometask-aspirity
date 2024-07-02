@@ -26,10 +26,9 @@ export default function Home() {
           </TabsList>
         </UserBanner>
         <div className="mt-4">
-          <TabsContent value="generalInfo" className="flex flex-row gap-4 w-full">
-            <PersonalInfo className="grow"/>
+          <TabsContent value="generalInfo" className="flex flex-col lg:flex-row gap-4 w-full">
+            <PersonalInfo />
             <EmployeeData 
-              className="w-[658px]"
               project={currentUserData.project}
               startDate={currentUserData.startDate}
               endDate={currentUserData.endDate}
