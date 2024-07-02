@@ -1,15 +1,25 @@
 import Image from 'next/image';
 
-export type AvatarPropsT = {
-    avatarSrc: string
+type SizeMapT = {
+    [key in 'big' | 'small']: number;
 };
 
-export const Avatar = ({ avatarSrc } : AvatarPropsT) => {
+const sizeMap: SizeMapT = {
+    big: 160,
+    small: 48,
+};
+
+export type AvatarPropsT = {
+    avatarSrc: string,
+    size: 'big' | 'small',
+};
+
+export const Avatar = ({ avatarSrc, size } : AvatarPropsT) => {
     return (
         <div>
             <Image 
-                width={160}
-                height={160}
+                width={sizeMap[size] ?? 48}
+                height={sizeMap[size] ?? 48}
                 alt="User photo"
                 src={avatarSrc}
                 className="rounded-full"
