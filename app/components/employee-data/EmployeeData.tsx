@@ -3,7 +3,13 @@ import { UserPropsT } from '../../../public/mockData/currentUserData';
 import { SectionBlock } from './SectionBlock';
 import { Avatar } from '../Avatar';
 import { Button } from '../Button';
-import { teamMembersData, TeamMemberT } from '../../../public/mockData/teamMembersData';
+import { teamMembersData } from '../../../public/mockData/teamMembersData';
+import {
+    Dialog,
+    DialogContent,
+    DialogTrigger,
+} from '../modals/Modal';
+import { TeamMembersModal } from '../modals/TeamMembersModal';
 
 export type EmployeeDataPropsT = Pick<UserPropsT, 'project' | 'startDate' | 'endDate'> & {
     className?: string
@@ -51,22 +57,29 @@ export const EmployeeData = ({ className, project, startDate, endDate } : Employ
                     className="w-1/2 "
                 >
                 {membersLength && (
-                    <div className="flex flex-row items-center gap-2 cursor-pointer">
-                        <ul className="flex flex-row">
-                            {
-                                teamMembersData.map((item, index) => {
-                                    if(index < 7) return (
-                                        <li key={item.id} className={`z-[membersLength - index] ${index !== 0 && "ml-[-15px]"}`}>
-                                            <Avatar avatarSrc={item.photo} size="small" className="border border-[2px] border-background-secondary"/>
-                                        </li>
-                                    )
-                                })
-                            }
-                        </ul>
-                        {membersLength > 7 && (
-                            <div className="">+ {membersLength - 7}</div>
-                        )}
-                    </div>
+                    <Dialog>
+                        <DialogTrigger>
+                            <div className="flex flex-row items-center gap-2 cursor-pointer">
+                                <ul className="flex flex-row">
+                                    {
+                                        teamMembersData.map((item, index) => {
+                                            if(index < 7) return (
+                                                <li key={item.id} className={`z-[membersLength - index] ${index !== 0 && "ml-[-15px]"}`}>
+                                                    <Avatar avatarSrc={item.photo} size="small" className="border border-[2px] border-background-secondary"/>
+                                                </li>
+                                            )
+                                        })
+                                    }
+                                </ul>
+                                {membersLength > 7 && (
+                                    <div className="">+ {membersLength - 7}</div>
+                                )}
+                            </div>
+                        </DialogTrigger>
+                        <DialogContent title="Команда" className="w-[360px] xs:w-[500px] sm:w-[700px] max-h-[700px]">
+                            <TeamMembersModal />
+                        </DialogContent>
+                    </Dialog>
                 )}
                 </SectionBlock>
 

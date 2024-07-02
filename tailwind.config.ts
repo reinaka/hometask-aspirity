@@ -17,6 +17,7 @@ module.exports = {
       'accent-deep': '#003182',
       'border-primary': '#363738',
       'red-dim': '#D77556',
+      'blue-light': '#a5c5f7',
     },
     fontFamily: {
       sans: ['Poppins', 'sans-serif'],

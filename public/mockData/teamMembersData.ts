@@ -3,7 +3,7 @@ export type TeamMemberT = {
     role: string,
     photo: string,
     id: string
-}
+};
 
 export const teamMembersData = [
     {
@@ -58,7 +58,37 @@ export const teamMembersData = [
         name: 'Sam Clark',
         role: 'QA Lead',
         photo: '/userPhotos/Clark.jpg',
-        id: 'nmgktyruey456ty'
+        id: 'nmgktyrucfdey456ty'
+    },
+    {
+        name: 'John Smith',
+        role: 'Junior UI/UX designer',
+        photo: '/userPhotos/Smith.jpg',
+        id: '87654789736yu'
+    },
+    {
+        name: 'Sarah Brown',
+        role: 'Middle Product Design TeamLead',
+        photo: '/userPhotos/Brown.jpg',
+        id: '9p87osc65i4wysdfghbn'
+    },
+    {
+        name: 'David Taylor',
+        role: 'Middle Android Developer',
+        photo: '/userPhotos/Taylor.jpg',
+        id: 'gcfd56ysew456tyuj'
+    },
+    {
+        name: 'Ann Williams',
+        role: 'Middle Head of Service',
+        photo: '/userPhotos/Kuznetsova.jpg',
+        id: 'hgwdcfxderty'
+    },
+    {
+        name: 'John Smith',
+        role: 'Junior UI/UX designer',
+        photo: '/userPhotos/Smith.jpg',
+        id: '8765478lkoj9736yu'
     },
 ];
 
