@@ -71,7 +71,7 @@ const DialogContent = React.forwardRef<
             <div className="flex flex-row items-center mb-8 w-full justify-between">
                 <DialogHeader>
                     <DialogTitle>
-                        <h1 className="text-[34px] items-center justify-between w-full leading-9">{props.title}</h1>
+                        <p className="text-[34px] items-center justify-between w-full leading-9">{props.title}</p>
                     </DialogTitle>
                 </DialogHeader>
                 <DialogPrimitive.Close className="w-6 h-6 flex justify-center items-center">
