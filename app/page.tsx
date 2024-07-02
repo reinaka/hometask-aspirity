@@ -1,9 +1,38 @@
-import Image from "next/image";
+import { UserBanner } from './components/UserBanner';
+import currentUserData from '../public/mockData/currentUserData';
+import {
+  Tabs,
+  TabsContent,
+  TabsList,
+  TabsTrigger,
+} from './components/Tabs';
+import { PersonalInfo } from './components/PersonalInfo';
+import { EmployeeData } from './components/EmployeeData';
 
 export default function Home() {
   return (
     <main>
-      <div>Main</div>
+      <Tabs defaultValue="generalInfo">
+        <UserBanner 
+          userName={currentUserData.userName}
+          avatarSrc={currentUserData.avatarSrc}
+          userRole={currentUserData.userRole}
+          userLocation={currentUserData.userLocation}
+          localTime={currentUserData.localTime}
+        >
+          <TabsList className="pt-[50px]">
+            <TabsTrigger value="generalInfo">Основная информация</TabsTrigger>
+            <TabsTrigger value="vacation">Отпуск</TabsTrigger>
+          </TabsList>
+        </UserBanner>
+        <div className="mt-4">
+          <TabsContent value="generalInfo" className="flex flex-row gap-4 w-full">
+            <PersonalInfo className="grow"/>
+            <EmployeeData className="w-[658px]"/>
+          </TabsContent>
+          <TabsContent value="vacation"><div>Vacation</div></TabsContent>
+        </div>
+      </Tabs>
     </main>
   );
 }

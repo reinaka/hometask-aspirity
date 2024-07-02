@@ -9,9 +9,13 @@ module.exports = {
   ],
   theme: {
     colors: {
-      'text-primary': '#E1E3E6',
-      'text-secondary': '#B0B1B6',
-      'text-tertiary': '#76787A',
+      'txt-primary': '#E1E3E6',
+      'txt-secondary': '#B0B1B6',
+      'txt-tertiary': '#76787A',
+      'background-secondary': '#232324',
+      'accent': '#0047BB',
+      'border-primary': '#363738',
+      'red-dim': '#D77556',
     },
     fontFamily: {
       sans: ['Poppins', 'sans-serif'],
