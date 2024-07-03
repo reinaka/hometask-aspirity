@@ -76,7 +76,7 @@ export const EmployeeData = ({ className, project, startDate, endDate } : Employ
                                 )}
                             </div>
                         </DialogTrigger>
-                        <DialogContent title="Команда" className="w-[360px] xs:w-[500px] sm:w-[700px] max-h-[700px]">
+                        <DialogContent title="Команда" className="w-[90%] max-w-[650px] max-h-[700px]">
                             <TeamMembersModal />
                         </DialogContent>
                     </Dialog>
