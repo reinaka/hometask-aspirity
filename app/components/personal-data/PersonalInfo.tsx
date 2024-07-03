@@ -31,7 +31,7 @@ export const PersonalInfo = ( { className } : PersonalInfoPropsT) => {
                 <DialogContent title="Персональная информация" className="w-[90%] md:w-[824px] max-h-[700px]">
                 <Formik
                     initialValues={initialValues} 
-                    onSubmit={() => alert('submit: ')}
+                    onSubmit={() => alert('К сожалению, форма сырая, ее нужно дорабатывать. Приношу извинения за временные неудобства')}
                 >
                     {({ values }) => (
                         <FormContent disabled={false} />
