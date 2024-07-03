@@ -1,7 +1,7 @@
 import Image from 'next/image';
 
 type SizeMapT = {
-    [key in 'big' | 'small']: number;
+    [key in 'big' | 'small' | 'mini']: number;
 };
 
 const sizeMap: SizeMapT = {
