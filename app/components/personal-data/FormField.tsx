@@ -13,7 +13,7 @@ export const FormField = ({ labelText, type, placeholder, name, disabled, fullSi
     return (
         <div className={`relative text-txt-secondary w-full ${fullSize ? 'lg:w-full' : 'sm:w-[48%]'}`}>
             <label 
-                className="absolute top-0 left-2 px-1 bg-background-secondary text-xs translate-y-[-50%]"
+                className="absolute top-0 left-2 px-1 bg-background-secondary text-xs translate-y-[-50%] z-50"
             >
                 <span>{labelText}</span>
             </label>

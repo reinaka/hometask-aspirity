@@ -36,6 +36,7 @@ export const FormContent = ({ disabled } : FormContentPropsT) => {
                     labelText="Дата рождения"
                     name="birthDate"
                     type="date"
+                    placeholder="31.12.1921"
                     disabled={disabled}
 
                 />
@@ -43,6 +44,7 @@ export const FormContent = ({ disabled } : FormContentPropsT) => {
                     labelText="Дата трудоустройства"
                     name="employmentStart"
                     type="date"
+                    placeholder="31.12.1951"
                     disabled={disabled}
                 />
                 <FormField 
