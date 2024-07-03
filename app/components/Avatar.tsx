@@ -7,11 +7,12 @@ type SizeMapT = {
 const sizeMap: SizeMapT = {
     big: 160,
     small: 48,
+    mini: 24
 };
 
 export type AvatarPropsT = {
     avatarSrc: string,
-    size: 'big' | 'small',
+    size: 'big' | 'small' | 'mini',
     className?: string
 };
 

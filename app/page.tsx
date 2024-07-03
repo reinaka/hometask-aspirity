@@ -11,7 +11,7 @@ import { EmployeeData } from './components/employee-data/EmployeeData';
 
 export default function Home() {
   return (
-    <main>
+    <>
       <Tabs defaultValue="generalInfo">
         <UserBanner 
           userName={currentUserData.userName}
@@ -37,6 +37,6 @@ export default function Home() {
           <TabsContent value="vacation"><div>Vacation</div></TabsContent>
         </div>
       </Tabs>
-    </main>
+    </>
   );
 }
