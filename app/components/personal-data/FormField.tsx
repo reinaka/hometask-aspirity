@@ -18,7 +18,7 @@ export const FormField = ({ labelText, type, placeholder, name, disabled, fullSi
                 <span>{labelText}</span>
             </label>
             <Field type={type} name={name} placeholder={placeholder} disabled={disabled || false}
-                className="bg-background-secondary px-2 py-[14px] border border-border-primary rounded w-full text-sm"
+                className="bg-background-secondary py-2 px-[14px] border border-border-primary rounded w-full text-sm"
             />
         </div>
     )

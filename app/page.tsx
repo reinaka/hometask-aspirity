@@ -6,7 +6,7 @@ import {
   TabsList,
   TabsTrigger,
 } from './components/Tabs';
-import { PersonalInfo } from './components/PersonalInfo';
+import { PersonalInfo } from './components/personal-data/PersonalInfo';
 import { EmployeeData } from './components/employee-data/EmployeeData';
 
 export default function Home() {
