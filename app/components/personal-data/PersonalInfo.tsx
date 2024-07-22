@@ -7,7 +7,7 @@ import {
     Dialog,
     DialogContent,
     DialogTrigger,
-} from '../modals/Modal';
+} from '../UI/Modal';
 
 export type PersonalInfoPropsT = {
     className?: string

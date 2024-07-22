@@ -8,7 +8,7 @@ export type TeamMemberT = {
 export const teamMembersData = [
     {
         name: 'John Smith',
-        role: 'Junior UI/UX designer',
+        role: 'Junior UI/UX designer kjlhgjfgvb kjhgfjcfvg jyitfurfcgvbn jhgfcfgh',
         photo: '/userPhotos/Smith.jpg',
         id: '87654736yu'
     },

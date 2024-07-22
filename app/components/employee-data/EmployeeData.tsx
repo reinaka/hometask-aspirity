@@ -8,7 +8,7 @@ import {
     Dialog,
     DialogContent,
     DialogTrigger,
-} from '../modals/Modal';
+} from '../UI/Modal';
 import { TeamMembersModal } from '../modals/TeamMembersModal';
 
 export type EmployeeDataPropsT = Pick<UserPropsT, 'project' | 'startDate' | 'endDate'> & {
@@ -57,30 +57,25 @@ export const EmployeeData = ({ className, project, startDate, endDate } : Employ
                     className="w-full sm:w-1/2 lg:w-full 2xl:w-1/2"
                 >
                 {membersLength && (
-                    <Dialog>
-                        <DialogTrigger>
-                            <div className="flex flex-row items-center gap-2 cursor-pointer">
-                                <ul className="flex flex-row">
-                                    {
-                                        teamMembersData.map((item, index) => {
-                                            if(index < 7) return (
-                                                <li key={item.id} className={`z-[membersLength - index] ${index !== 0 && "ml-[-15px]"}`}>
-                                                    <Avatar avatarSrc={item.photo} size="small" className="border border-[2px] border-background-secondary"/>
-                                                </li>
-                                            )
-                                        })
-                                    }
-                                </ul>
-                                {membersLength > 7 && (
-                                    <div className="">+ {membersLength - 7}</div>
-                                )}
-                            </div>
-                        </DialogTrigger>
-                        <DialogContent title="Команда" className="w-[90%] max-w-[650px] max-h-[700px]">
-                            <TeamMembersModal />
-                        </DialogContent>
-                    </Dialog>
-                )}
+                    <TeamMembersModal data = {teamMembersData}>
+                        <div className="flex flex-row items-center gap-2 cursor-pointer">
+                            <ul className="flex flex-row">
+                                {
+                                    teamMembersData.map((item, index) => {
+                                        if(index < 7) return (
+                                            <li key={item.id} className={`z-[membersLength - index] ${index !== 0 && "ml-[-15px]"}`}>
+                                                <Avatar avatarSrc={item.photo} size="small" className="border border-[2px] border-background-secondary"/>
+                                            </li>
+                                        )
+                                    })
+                                }
+                            </ul>
+                            {membersLength > 7 && (
+                                <div className="">+ {membersLength - 7}</div>
+                            )}
+                        </div>
+                    </TeamMembersModal>)
+                }
                 </SectionBlock>
 
                 <SectionBlock
