@@ -24,7 +24,7 @@ export const TeamMembersModal = ({children, data} : TeamMembersModalPropsT) => {
             <DialogTrigger>{children}</DialogTrigger>
             <DialogOverlay>
                 <DialogContent className="max-h-dvh h-[700px] w-[650px] max-w-[calc(100vw-16px)]">
-                    <DialogHeader className="flex flex-row justify-between">
+                    <DialogHeader className="flex flex-row justify-between items-center">
                         <DialogTitle>Команда</DialogTitle>
                         <DialogClose className="w-6 h-6 flex justify-center items-center">
                             <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
